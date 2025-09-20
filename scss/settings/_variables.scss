@@ -1,0 +1,58 @@
+$gap: 0.8rem !default;
+
+$columns: 12 !default;
+
+$horizontal-padding: 1.6rem !default;
+$vertical-padding: 1.2rem !default;
+
+$button-padding: 1.2rem 1.6rem !default;
+$button-gap: 0.8rem !default;
+
+$shell-width: 75rem !default;
+$shell-gap: 1rem !default;
+
+$small-desktop: 1439px !default;
+$tablet-landscape: 1279px !default;
+$tablet-portrait: 1023px !default;
+$mobile: 767px !default;
+
+$breakpoints: (
+	xs: (
+		min: 0,
+		max: $mobile
+	),
+	sm: (
+		min: $mobile + 1,
+		max: $tablet-portrait
+	),
+	md: (
+		min: $tablet-portrait + 1,
+		max: $tablet-landscape
+	),
+	lg: (
+		min: $tablet-landscape + 1,
+		max: $small-desktop
+	),
+	xl: (
+		min: $small-desktop + 1
+	)
+) !default;
+
+$displays: 'block', 'inline', 'inline-block', 'flex', 'inline-flex' !default;
+
+$alignments: 'center', 'right', 'left', 'justify' !default;
+
+$z-indexes: (
+	header: (),
+	main: (
+		alert: (),
+		content: (
+			title,
+			inner,
+			overlay
+		),
+		aside: ()
+	),
+	footer: (),
+	modal: ()
+) !default;

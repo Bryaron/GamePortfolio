@@ -1,0 +1,13 @@
+@use '../settings/variables' as *;
+@use '../settings/colors' as *;
+@use '../settings/texts' as *;
+
+a {
+    text-decoration: underline;
+    font-family: $press-start-font;
+    font-size: $font-size-14px;
+    color: $gray-color;
+    &:hover {
+        color: $orange-color;
+    }
+}

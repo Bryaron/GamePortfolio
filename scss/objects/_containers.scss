@@ -1,0 +1,305 @@
+@use '../settings/variables' as *;
+@use '../settings/colors' as *;
+@use '../tools/flexbox' as *;
+
+.o-container {
+    display: flex;
+}
+
+.o-body-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header */
+.o-header-container {
+    @include flex($align: flex-end, $justify: center);
+    width: 100%;
+    min-width: 43.0rem;
+    padding: 0.8rem 21.5rem;
+    height: 15.6rem;
+    max-height: 15.6rem;
+    flex: 1 0 auto;
+}
+.o-header-navbar-container {
+    @include flex($align: center, $justify: center);
+    gap: $gap;
+    width: 100%;
+    height: 4.8rem;
+    min-width: 21.2rem;
+}
+/* Header End*/
+
+/* Button */
+.o-btn-container {
+    @include flex($align: center, $justify: flex-start);
+    width: 100%;
+    height: 4.8rem;
+    min-width: 4.6rem;
+    max-width: 16.0rem;
+    padding: $button-padding;
+    gap: $button-gap;
+}
+/* Button End*/
+
+/* Item */
+.o-item-container {
+    position: relative;
+}
+/* Item End*/
+
+/* Inventory */
+.o-inventory-container {
+    @include flex-row($align: center, $justify: flex-start, $wrap: nowrap);
+    min-width: 43.0rem;
+    width: 100%;
+    height: fit-content;
+    padding: 2.4rem 0rem 0.8rem 0rem;
+    flex: 1 0 auto;
+    .o-inventory-content-container {
+        @include flex-row($align: flex-start, $justify: center, $wrap: wrap);
+        gap: 4.2rem;
+        width: 100%;
+        height: fit-content;
+    }
+}
+
+/* Character Items */
+.o-character-items-container {
+    @include flex-column($align: center, $justify: flex-start);
+    gap: 2.4rem;
+    padding: 2.4rem 0rem;
+    width: 28.0rem;
+    height: 36.4rem;
+}
+.o-grid-items-container {
+    @include flex($align: flex-start, $justify: left, $wrap: wrap);
+    gap: $gap;
+    /* border: 0.2rem solid $secondary-color; */
+    border-radius: 0.4rem;
+    padding: $vertical-padding $horizontal-padding;
+    min-width: 28.0rem;
+    max-width: 28.0rem;
+    max-height: 20.8rem;
+    position: relative;
+    /* Stroke excluded from layout container */
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 0.2rem solid $secondary-color;
+        border-radius: 0.4rem;
+        pointer-events: none;
+        z-index: 1;
+    }
+}
+.o-item-info-container {
+    position: relative;
+    @include flex-column($align: flex-start, $justify: flex-start);
+    gap: $gap;
+    /* border: 0.2rem solid $secondary-color;
+    border-radius: 0.2rem; */
+    padding: 0.8rem;
+    width: 24.8rem;
+    height: 8.4rem;
+    min-width: 18.0rem;
+    max-width: 24.8rem;
+
+    .o-item-container {
+        position: absolute;
+        top: -1.9rem;
+    }
+    /* Stroke excluded from layout container */
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 0.2rem solid $secondary-color;
+        border-radius: 0.2rem;
+        pointer-events: none;
+        z-index: 1;
+    }
+}
+.o-item-info-header-container {
+    position: relative;
+    width: 232px;
+    height: 42px;
+}
+.o-item-info-content-container {
+    @include flex-column($align: flex-start);
+    gap: $gap;
+    padding: 0 0 0 8.0rem;
+    width: 23.2rem;
+    height: 4.2rem;
+}
+.o-item-info-state-container {
+    @include flex($align: center, $justify: center);
+    /* border-top: 0.2rem solid $secondary-color; */
+    padding: 0.4rem;
+    width: 23.2rem;
+    height: 1.8rem;
+    position: relative;
+
+    /* Stroke excluded from layout container with a stroke outside */
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -0.2rem;
+        border-top: 0.2rem solid $secondary-color;
+        border-radius: 0.2rem;
+        pointer-events: none;
+        z-index: 1;
+    }
+}
+/* Character Items End */
+
+/* Character  */
+.o-character-container {
+    @include flex-column($align: center, $justify: center);
+    gap: $gap ;
+    padding: 0rem 0.8rem;
+    width: 25.4rem;
+    min-width: 25.4rem;
+    height: 33.0rem;
+
+    .o-character-rows-container{
+        @include flex-row($align: flex-start, $justify: center);
+        width: 23.2rem;
+        height: 20.2rem;
+        gap: $gap;
+
+        .o-item-row-container {
+            @include flex-column($align: center, $justify: center);
+            gap: $gap;
+            padding: 0.8rem 0.8rem;
+            width: 7.2rem;
+            height: 20.0rem;
+        }
+        .o-character-sprite-container {
+            width: 7.2rem;
+            height: 20.2rem;
+            max-height: 20.2rem;
+
+            img {
+                width: 7.2rem;
+                height: 20.2rem;
+                object-fit: cover;
+                image-rendering: pixelated;
+            }
+        }   
+    }
+    .o-character-stats-container {
+        padding: 0rem 0rem 0.4rem 0rem;
+        width: 23.8rem;
+        height: 1.8rem;
+    }
+    .o-character-skill-stats-container {
+        @include flex-row($align: center, $justify: center, $wrap: wrap);
+        width: 23.8rem;
+        height: 7.2rem;
+        gap: $gap 8.0rem;
+        margin: 0.8rem 0.8rem;
+
+        .o-character-stat-container {
+            @include flex-row($align: center, $justify: flex-start);
+            gap: $gap;
+            width: 6.0rem;
+            height: 2.4rem;
+        }
+    }
+}
+/* Character End */
+
+/* Project Bag */
+.o-projects-bag-container {
+    @include flex-row($align: center, $justify: flex-start, $wrap: wrap);
+    gap: 2.0rem 2.0rem;
+    height: fit-content;
+    width: 100%;
+    min-width: 20.0rem;
+    max-width: 42.0rem;
+}
+
+.o-project-card-container {
+    @include flex-row($align: flex-start, $justify: center, $wrap: wrap);
+    /* @include flex-item(); */
+    gap: 1.6rem;
+    padding: 1.6rem;
+    width: 20.0rem;
+    height: fit-content;
+    min-width: 20.0rem;
+    max-width: 41.8rem;
+    @include flex-item($grow: 1);
+    .o-project-card-image-container {
+        border-radius: 0.4rem;
+        height: 8.5rem;
+        min-width: 15.2rem;
+        @include flex-item();
+    }
+    .o-project-card-info-container {
+        @include flex-column($align: center, $justify: flex-start);
+        gap: 1.0rem;
+        width: 17.2rem;
+        height: 8.5rem;
+        min-width: 12.3rem;
+        @include flex-item($grow: 0);
+        /* If I want another flow */
+        /* @include flex-item($grow: 1); */
+        .o-project-card-titles-container {
+            @include flex-column($align: flex-start, $justify: flex-start);
+            gap: -0.4rem;
+            width: 100%;
+            height: 3.1rem;
+        }
+        .o-project-card-categories-container {
+            @include flex-row($align: center, $justify: flex-start, $wrap: wrap);
+            gap: 0.8rem;
+            padding: 0rem 1.3rem 0rem 0rem;
+            width: 100%;
+            height: 4.4rem;
+        }
+    }
+}
+
+.o-pill {
+    @include flex-row($align: flex-start, $justify: flex-start);
+    gap: 0.8rem;
+    border-radius: 2.0rem;
+    padding: 0.4rem 0.8rem;
+    width: fit-content;
+    height: fit-content;
+}
+
+/* Project Bag End*/
+
+/* Resource Link */
+
+.o-links-container {
+    @include flex-column($align: center, $justify: center, $wrap: nowrap);
+    gap: 0.8rem;
+    padding: 2.4rem 0rem;
+    width: 100%;
+    min-width: 43.0rem;
+    height: fit-content;
+    flex: 1 0 auto;
+
+    .o-links-content-container {
+        @include flex-row($align: center, $justify: center, $wrap: wrap);
+        min-width: 11.4rem;
+        width: 100%;
+        height: fit-content;
+        gap: 3.2rem;
+    }
+
+    .o-links-link-container {
+        @include flex-column($align: center, $justify: center, $wrap: nowrap);
+        gap: 0.8rem;
+        width: fit-content;
+        height: fit-content;
+    }
+}
+
+/* Resource Link End */

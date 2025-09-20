@@ -1,0 +1,19 @@
+@use '../settings/variables' as *;
+@use '../settings/colors' as *;
+
+.c-item-info {
+    .c-item-info__content{
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 140%;
+        color: $gray-color;
+    }
+    .c-item-info__state {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 83%;
+        text-align: center;
+        -webkit-text-stroke: 1px $primary-color;
+        color: $green-light-color;
+    }
+}

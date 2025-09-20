@@ -1,0 +1,20 @@
+@use '../settings/variables' as *;
+@use '../settings/colors' as *;
+@use '../settings/texts' as *;
+
+.c-links {
+    &__content {
+    
+    }
+
+    &__link {
+
+        p {
+            font-family: $primary-font;
+            font-weight: 500;
+            font-size: 14px;
+            text-align: $font-size-14px;
+            color: #bababa;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+@use '../settings/variables' as *;
+@use '../settings/colors' as *;
+@use '../tools/flexbox' as *;
+
+.c-grid-items {
+    background-color: none;
+}

@@ -1,0 +1,11 @@
+@use '../settings/variables' as *;
+@use '../settings/colors' as *;
+@use '../settings/texts' as *;
+
+img {
+    max-width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

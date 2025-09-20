@@ -1,0 +1,22 @@
+@use 'settings/variables' as *;
+@use 'index' as *;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --primary-color: #{$primary-color};
+    --secondary-color: #{$secondary-color};
+    --accent-color: #{$accent-color};
+    --font-family: #{$press-start-font};
+    --font-size: #{$font-size-14px};
+    --line-height: 1.5;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: #{$primary-font};
+}

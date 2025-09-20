@@ -1,0 +1,16 @@
+@use '../settings/variables' as *;
+@use '../settings/colors' as *;
+@use '../settings/texts' as *;
+@use '../tools/flexbox' as *;
+
+.c-pill {
+    background: $accent-color;
+    p {
+        font-family: $roboto-font;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1;
+        letter-spacing: 0.02em;
+        color: white;
+    }
+}

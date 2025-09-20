@@ -1,0 +1,12 @@
+@use '../settings/variables' as *;
+@use '../settings/colors' as *;
+@use '../settings/texts' as *;
+
+input, textarea, select, button {
+    font-family: $press-start-font;
+    font-size: $font-size-14px;
+}
+
+button {
+    cursor: pointer;
+}

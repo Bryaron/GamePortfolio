@@ -1,0 +1,7 @@
+@use '../settings/variables' as *;
+@use '../settings/colors' as *;
+
+.c-inventory {
+    background-color: none;
+    background: $primary-gradient
+}

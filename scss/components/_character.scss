@@ -1,0 +1,19 @@
+@use '../settings/variables' as *;
+@use '../settings/colors' as *;
+@use '../tools/flexbox' as *;
+
+.c-character {
+    background-color: none;
+    
+    &__stats {
+        border-bottom: 1px dashed $secondary-color;
+        p {
+            span {
+                color: #0ACF83;
+            }
+            span + span {
+                color: #FAD87F;
+            }
+        }
+    }
+}

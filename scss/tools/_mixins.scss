@@ -1,0 +1,26 @@
+@mixin hover {
+	&:hover {
+		@media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover) {
+			@content;
+		}
+	}
+}
+
+@mixin display($value: 'none') {
+	display: #{$value} !important;
+}
+
+@mixin centered {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+@mixin centered-transform {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}

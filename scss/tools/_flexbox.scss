@@ -1,0 +1,54 @@
+@use '../settings/variables' as *;
+@use 'sass:math';
+@use 'sass:map';
+
+@mixin flex($align: stretch , $justify: center, $wrap: nowrap, $direction: row, $display: flex) {
+    display: $display;
+    flex-flow: $direction $wrap;
+    align-items: $align;
+    justify-content: $justify;
+}
+@mixin flex-row($align: stretch, $justify: flex-start, $wrap: nowrap) {
+    @include flex($align, $justify, $wrap);
+}
+@mixin flex-column($align: stretch, $justify: flex-start, $wrap: nowrap) {
+    @include flex($align, $justify, $wrap, column);
+}
+@mixin flex-item($align: auto, $grow: 1, $shrink: 1, $basis: auto) {
+    flex: $grow $shrink $basis;
+    align-self: $align;
+}
+@mixin flex-item-start($align: flex-start, $grow: 1, $shrink: 1, $basis: auto) {
+    flex: $grow $shrink $basis;
+    align-self: $align;
+}
+@mixin flex-item-center($align: center, $grow: 1, $shrink: 1, $basis: auto) {
+    flex: $grow $shrink $basis;
+    align-self: $align;
+}
+@mixin flex-item-end($align: flex-end, $grow: 1, $shrink: 1, $basis: auto) {
+    flex: $grow $shrink $basis;
+    align-self: $align;
+}
+@mixin flex-item-stretch($align: stretch, $grow: 1, $shrink: 1, $basis: auto) {
+    flex: $grow $shrink $basis;
+    align-self: $align;
+}
+@mixin flex-item-baseline($align: baseline, $grow: 1, $shrink: 1, $basis: auto) {
+    flex: $grow $shrink $basis;
+    align-self: $align;
+}
+@mixin grid() {
+	@each $breakpoint, $width in $breakpoints {
+		@media (min-width: #{map.get($width, min)}) {
+			@for $i from 1 through $columns {
+				$size: math.div($i, $columns) * 100%;
+
+				.#{$breakpoint}-#{$i} {
+					max-width: $size;
+					flex: 0 0 $size;
+				}
+			}
+		}
+	}
+}

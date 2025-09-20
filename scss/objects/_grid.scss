@@ -1,0 +1,30 @@
+@use '../settings/variables' as *;
+@use '../tools/flexbox' as *;
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+    width: 100%;
+}
+
+.grid--center {
+    justify-items: center;
+    align-items: center;
+}
+
+.grid--auto {
+    
+}
+
+.o-grid {
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0 -1 * $gap;
+
+	&__item {
+		padding: 0 $gap;
+	}
+}
+
+/* @include grid; */

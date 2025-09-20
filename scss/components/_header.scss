@@ -1,0 +1,7 @@
+@use '../settings/variables' as *;
+@use '../settings/colors' as *;
+
+.c-header {
+    background-color: $yellow-color;
+    border-bottom: 0.2rem solid $secondary-color;
+}

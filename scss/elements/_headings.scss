@@ -1,0 +1,9 @@
+@use '../settings/colors' as *;
+@use '../settings/texts' as *;
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: $gray-color;
+    font-family: $press-start-font;
+    font-weight: bold;
+}

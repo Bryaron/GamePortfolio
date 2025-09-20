@@ -1,0 +1,695 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: "Press Start 2P", "Manrope", "Roboto", sans-serif;
+  font-size: 1.4rem;
+  color: #E3E3E3;
+  background-color: #000033;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #E3E3E3;
+  font-family: "Press Start 2P";
+  font-weight: bold;
+}
+
+input, textarea, select, button {
+  font-family: "Press Start 2P";
+  font-size: 1.4rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+a {
+  text-decoration: underline;
+  font-family: "Press Start 2P";
+  font-size: 1.4rem;
+  color: #E3E3E3;
+}
+a:hover {
+  color: #FF9800;
+}
+
+.o-container {
+  display: flex;
+}
+
+.o-body-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+.o-header-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  min-width: 43rem;
+  padding: 0.8rem 21.5rem;
+  height: 15.6rem;
+  max-height: 15.6rem;
+  flex: 1 0 auto;
+}
+
+.o-header-navbar-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  width: 100%;
+  height: 4.8rem;
+  min-width: 21.2rem;
+}
+
+/* Header End*/
+/* Button */
+.o-btn-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 4.8rem;
+  min-width: 4.6rem;
+  max-width: 16rem;
+  padding: 1.2rem 1.6rem;
+  gap: 0.8rem;
+}
+
+/* Button End*/
+/* Item */
+.o-item-container {
+  position: relative;
+}
+
+/* Item End*/
+/* Inventory */
+.o-inventory-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 43rem;
+  width: 100%;
+  height: fit-content;
+  padding: 2.4rem 0rem 0.8rem 0rem;
+  flex: 1 0 auto;
+}
+.o-inventory-container .o-inventory-content-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4.2rem;
+  width: 100%;
+  height: fit-content;
+}
+
+/* Character Items */
+.o-character-items-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2.4rem;
+  padding: 2.4rem 0rem;
+  width: 28rem;
+  height: 36.4rem;
+}
+
+.o-grid-items-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: left;
+  gap: 0.8rem;
+  /* border: 0.2rem solid $secondary-color; */
+  border-radius: 0.4rem;
+  padding: 1.2rem 1.6rem;
+  min-width: 28rem;
+  max-width: 28rem;
+  max-height: 20.8rem;
+  position: relative;
+  /* Stroke excluded from layout container */
+}
+.o-grid-items-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 0.2rem solid #FAD87F;
+  border-radius: 0.4rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.o-item-info-container {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  /* border: 0.2rem solid $secondary-color;
+  border-radius: 0.2rem; */
+  padding: 0.8rem;
+  width: 24.8rem;
+  height: 8.4rem;
+  min-width: 18rem;
+  max-width: 24.8rem;
+  /* Stroke excluded from layout container */
+}
+.o-item-info-container .o-item-container {
+  position: absolute;
+  top: -1.9rem;
+}
+.o-item-info-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 0.2rem solid #FAD87F;
+  border-radius: 0.2rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.o-item-info-header-container {
+  position: relative;
+  width: 232px;
+  height: 42px;
+}
+
+.o-item-info-content-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  padding: 0 0 0 8rem;
+  width: 23.2rem;
+  height: 4.2rem;
+}
+
+.o-item-info-state-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  /* border-top: 0.2rem solid $secondary-color; */
+  padding: 0.4rem;
+  width: 23.2rem;
+  height: 1.8rem;
+  position: relative;
+  /* Stroke excluded from layout container with a stroke outside */
+}
+.o-item-info-state-container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -0.2rem;
+  border-top: 0.2rem solid #FAD87F;
+  border-radius: 0.2rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Character Items End */
+/* Character  */
+.o-character-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 0rem 0.8rem;
+  width: 25.4rem;
+  min-width: 25.4rem;
+  height: 33rem;
+}
+.o-character-container .o-character-rows-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  width: 23.2rem;
+  height: 20.2rem;
+  gap: 0.8rem;
+}
+.o-character-container .o-character-rows-container .o-item-row-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 0.8rem 0.8rem;
+  width: 7.2rem;
+  height: 20rem;
+}
+.o-character-container .o-character-rows-container .o-character-sprite-container {
+  width: 7.2rem;
+  height: 20.2rem;
+  max-height: 20.2rem;
+}
+.o-character-container .o-character-rows-container .o-character-sprite-container img {
+  width: 7.2rem;
+  height: 20.2rem;
+  object-fit: cover;
+  image-rendering: pixelated;
+}
+.o-character-container .o-character-stats-container {
+  padding: 0rem 0rem 0.4rem 0rem;
+  width: 23.8rem;
+  height: 1.8rem;
+}
+.o-character-container .o-character-skill-stats-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  width: 23.8rem;
+  height: 7.2rem;
+  gap: 0.8rem 8rem;
+  margin: 0.8rem 0.8rem;
+}
+.o-character-container .o-character-skill-stats-container .o-character-stat-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  width: 6rem;
+  height: 2.4rem;
+}
+
+/* Character End */
+/* Project Bag */
+.o-projects-bag-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem 2rem;
+  height: fit-content;
+  width: 100%;
+  min-width: 20rem;
+  max-width: 42rem;
+}
+
+.o-project-card-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
+  /* @include flex-item(); */
+  gap: 1.6rem;
+  padding: 1.6rem;
+  width: 20rem;
+  height: fit-content;
+  min-width: 20rem;
+  max-width: 41.8rem;
+  flex: 1 1 auto;
+  align-self: auto;
+}
+.o-project-card-container .o-project-card-image-container {
+  border-radius: 0.4rem;
+  height: 8.5rem;
+  min-width: 15.2rem;
+  flex: 1 1 auto;
+  align-self: auto;
+}
+.o-project-card-container .o-project-card-info-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 17.2rem;
+  height: 8.5rem;
+  min-width: 12.3rem;
+  flex: 0 1 auto;
+  align-self: auto;
+  /* If I want another flow */
+  /* @include flex-item($grow: 1); */
+}
+.o-project-card-container .o-project-card-info-container .o-project-card-titles-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: -0.4rem;
+  width: 100%;
+  height: 3.1rem;
+}
+.o-project-card-container .o-project-card-info-container .o-project-card-categories-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  padding: 0rem 1.3rem 0rem 0rem;
+  width: 100%;
+  height: 4.4rem;
+}
+
+.o-pill {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  border-radius: 2rem;
+  padding: 0.4rem 0.8rem;
+  width: fit-content;
+  height: fit-content;
+}
+
+/* Project Bag End*/
+/* Resource Link */
+.o-links-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 2.4rem 0rem;
+  width: 100%;
+  min-width: 43rem;
+  height: fit-content;
+  flex: 1 0 auto;
+}
+.o-links-container .o-links-content-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  min-width: 11.4rem;
+  width: 100%;
+  height: fit-content;
+  gap: 3.2rem;
+}
+.o-links-container .o-links-link-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  width: fit-content;
+  height: fit-content;
+}
+
+/* Resource Link End */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.grid--center {
+  justify-items: center;
+  align-items: center;
+}
+
+.o-grid {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 -0.8rem;
+}
+.o-grid__item {
+  padding: 0 0.8rem;
+}
+
+/* @include grid; */
+.c-header-navbar {
+  /* Empty */
+}
+
+.c-button {
+  overflow: hidden;
+  border: none;
+  background: none;
+  color: white;
+  -webkit-text-stroke: 1px #FF417D;
+}
+.c-button__title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.c-button:hover {
+  background: #FF9800;
+  box-shadow: 0.8rem 0 0 0 rgba(255, 152, 0, 0.5);
+  -webkit-text-stroke: 0;
+  stroke: none;
+}
+.c-button--on {
+  background: #FF9800;
+  stroke: #FF417D;
+}
+.c-button--off {
+  stroke: #FF417D;
+}
+.c-button svg {
+  min-width: 24px;
+  max-width: 24px;
+  min-height: 24px;
+  max-height: 24px;
+}
+
+.c-header {
+  background-color: #FACC15;
+  border-bottom: 0.2rem solid #FAD87F;
+}
+
+.c-character-items {
+  background-color: none;
+}
+
+.c-item {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-image-slice: 23 23 23 23;
+  border-image-width: auto auto auto auto;
+  border-image-outset: 1px 1px 1px 1px;
+  border-image-repeat: round round;
+  border-image-source: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTgiIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1OCA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTM2IDFINTVDNTYuMTA0NiAxIDU3IDEuODk1NDMgNTcgM1YyMk01NyAzNlY1NUM1NyA1Ni4xMDQ2IDU2LjEwNDYgNTcgNTUgNTdIMzZNMjIgNTdIM0MxLjg5NTQzIDU3IDEgNTYuMTA0NiAxIDU1VjM2TTEgMjJWM0MxIDEuODk1NDMgMS44OTU0MyAxIDMgMUgyMiIgc3Ryb2tlPSIjRkFEODdGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K");
+  border-style: solid;
+}
+.c-item svg:first-child, .c-item img:first-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+.c-item svg:last-child, .c-item img:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 80%;
+}
+.c-item--outline {
+  background: none;
+}
+.c-item--filled {
+  background: #FAD87F;
+}
+
+.c-grid-items {
+  background-color: none;
+}
+
+.c-item-info .c-item-info__content {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 140%;
+  color: #E3E3E3;
+}
+.c-item-info .c-item-info__state {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 83%;
+  text-align: center;
+  -webkit-text-stroke: 1px #000033;
+  color: #98FF98;
+}
+
+.c-character {
+  background-color: none;
+}
+.c-character__stats {
+  border-bottom: 1px dashed #FAD87F;
+}
+.c-character__stats p span {
+  color: #0ACF83;
+}
+.c-character__stats p span + span {
+  color: #FAD87F;
+}
+
+.c-projects-bag {
+  /* border-radius: 16px;
+  background: $gray-dark-color; */
+}
+
+.c-project-card {
+  border: 0.2rem solid #FAD87F;
+  border-radius: 1.6rem;
+}
+.c-project-card__titles p {
+  font-family: "Press Start 2P", "Manrope", "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: white;
+}
+.c-project-card__titles p + p {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.c-inventory {
+  background-color: none;
+  background: linear-gradient(90deg, #A024D6 0%, #6725D6 100%);
+}
+
+.c-pill {
+  background: #7FC5FA;
+}
+.c-pill p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: white;
+}
+
+.c-links__link p {
+  font-family: "Press Start 2P", "Manrope", "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: 1.4rem;
+  color: #bababa;
+}
+
+:root {
+  --primary-color: #000033;
+  --secondary-color: #FAD87F;
+  --accent-color: #7FC5FA;
+  --font-family: Press Start 2P;
+  --font-size: 1.4rem;
+  --line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Press Start 2P, Manrope, Roboto, sans-serif;
+}
+
+/*# sourceMappingURL=styles.css.map */
