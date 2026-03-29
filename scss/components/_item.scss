@@ -14,7 +14,9 @@
 
     svg:first-child, img:first-child {
         @include centered-transform();
-        z-index: 99;
+        width: 2.8rem;
+        height: 2.8rem;
+        z-index: 98;
     }
     svg:last-child, img:last-child {
         @include centered-transform();
@@ -27,5 +29,12 @@
 
     &--filled {
         background: $secondary-color;
+    }
+
+    img[src=""],
+    img:not([src]) {
+        visibility: hidden;
+        width: 0;
+        height: 0;
     }
 }

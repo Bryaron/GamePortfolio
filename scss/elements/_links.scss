@@ -3,7 +3,7 @@
 @use '../settings/texts' as *;
 
 a {
-    text-decoration: underline;
+    text-decoration: none;
     font-family: $press-start-font;
     font-size: $font-size-14px;
     color: $gray-color;

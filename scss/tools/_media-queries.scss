@@ -42,6 +42,18 @@
 	}
 }
 
+@mixin mobile-only {
+	@media (min-width: #{$small-mobile + 1}) and (max-width: $mobile) {
+		@content;
+	}
+}
+
+@mixin small-mobile {
+	@media (max-width: #{$small-mobile}) {
+		@content;
+	}
+}
+
 @mixin reduced-motion($preference: reduce) {
 	@media (prefers-reduced-motion: $preference) {
 		@content;

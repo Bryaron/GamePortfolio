@@ -4,9 +4,8 @@
 @use '../tools/flexbox' as *;
 
 .c-project-card {
-    border: 0.2rem solid $secondary-color;
     border-radius: 1.6rem;
-
+    background: #6725d6;
     &__titles {
         p {
             font-family: $primary-font;
@@ -15,10 +14,10 @@
             color: white;
         }
         p + p {
-            font-family: $manrope-font;
+            font-family: $roboto-font;
             font-weight: 400;
             font-size: $font-size-12px;
             color: white;
         }
-    }
+    }   
 }

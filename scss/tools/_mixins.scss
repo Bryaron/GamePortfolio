@@ -24,3 +24,30 @@
     left: 50%;
     transform: translate(-50%, -50%)
 }
+
+@mixin border-box-shadow($inset: inset, $size, $color, $border-radius: 0) {
+	box-shadow: #{$inset} 0 0 0 #{$size} #{$color};
+	border-radius: #{$border-radius};
+}
+
+@mixin border-after($size, $color, $border-radius: 0, $inset: 0 0 0 0, $border-side: 'all') {
+	&::after {
+		content: '';
+		position: absolute;
+		border-radius: #{$border-radius};
+		pointer-events: none;
+		inset: $inset;
+		@if $border-side == 'all' {
+			border: #{$size} solid #{$color};
+		} @else if $border-side == 'top' {
+			border-top: #{$size} solid #{$color};
+		} @else if $border-side == 'bottom' {
+			border-bottom: #{$size} solid #{$color};
+		} @else if $border-side == 'left' {
+			border-left: #{$size} solid #{$color};
+		} @else if $border-side == 'right' {
+			border-right: #{$size} solid #{$color};
+		}
+		z-index: 1;
+	}
+}

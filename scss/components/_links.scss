@@ -1,14 +1,31 @@
 @use '../settings/variables' as *;
 @use '../settings/colors' as *;
 @use '../settings/texts' as *;
+@use '../tools/media-queries' as *;
 
 .c-links {
     &__content {
-    
+        @include small-desktop {
+         /* just to match the specificity  */
+            &.o-links-content-container {
+                justify-content: space-evenly;
+            }    
+        }
     }
 
     &__link {
-
+        @include small-mobile {
+            &:nth-child(1) {
+            order: 2;
+        }
+            &:nth-child(2) {
+                order: 1;
+                width: 100%;
+            }
+            &:nth-child(3) {
+                order: 3;
+            }
+        }
         p {
             font-family: $primary-font;
             font-weight: 500;

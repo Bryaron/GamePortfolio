@@ -1,8 +1,17 @@
 @use '../settings/variables' as *;
 @use '../settings/colors' as *;
 @use '../tools/flexbox' as *;
+@use '../tools/media-queries' as *;
 
 .c-projects-bag {
-    /* border-radius: 16px;
-    background: $gray-dark-color; */
+
+
+    @include mobile {
+        flex: none;
+    }
+
+    @include tablet-portrait-only {
+        flex: none;
+        max-width: 95%;
+    }
 }

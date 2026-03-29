@@ -2,6 +2,7 @@
 @use '../settings/colors' as *;
 
 .c-item-info {
+    background-color: $gray-dark-color-2;
     .c-item-info__content{
         font-weight: 500;
         font-size: 1.2rem;
@@ -13,7 +14,7 @@
         font-size: 1.2rem;
         line-height: 83%;
         text-align: center;
-        -webkit-text-stroke: 1px $primary-color;
+        /* -webkit-text-stroke: 1px $primary-color; */
         color: $green-light-color;
     }
 }

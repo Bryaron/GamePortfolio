@@ -15,25 +15,30 @@ $small-desktop: 1439px !default;
 $tablet-landscape: 1279px !default;
 $tablet-portrait: 1023px !default;
 $mobile: 767px !default;
+$small-mobile: 479px !default;
 
 $breakpoints: (
 	xs: (
 		min: 0,
-		max: $mobile
+		max: $small-mobile
 	),
 	sm: (
+		min: $small-mobile + 1,
+		max: $mobile
+	),
+	md: (
 		min: $mobile + 1,
 		max: $tablet-portrait
 	),
-	md: (
+	lg: (
 		min: $tablet-portrait + 1,
 		max: $tablet-landscape
 	),
-	lg: (
+	xl: (
 		min: $tablet-landscape + 1,
 		max: $small-desktop
 	),
-	xl: (
+	xll: (
 		min: $small-desktop + 1
 	)
 ) !default;

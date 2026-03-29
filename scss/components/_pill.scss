@@ -6,11 +6,12 @@
 .c-pill {
     background: $accent-color;
     p {
-        font-family: $roboto-font;
+        font-family: $manrope-font;
         font-weight: 500;
         font-size: 1.4rem;
-        line-height: 1;
+        line-height: 1rem;
         letter-spacing: 0.02em;
         color: white;
+        text-box-trim: none;
     }
 }
