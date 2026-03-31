@@ -18,16 +18,13 @@
         -webkit-text-stroke: 0;
         stroke: none;
     }
-
     &--on {
         background: $orange-color;
         stroke: $pink-color;
     }
-
     &--off {
         stroke: $pink-color;
     }
-
     svg {
         min-width: 24px;
         max-width: 24px;

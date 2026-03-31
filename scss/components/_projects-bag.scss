@@ -4,12 +4,9 @@
 @use '../tools/media-queries' as *;
 
 .c-projects-bag {
-
-
     @include mobile {
         flex: none;
     }
-
     @include tablet-portrait-only {
         flex: none;
         max-width: 95%;

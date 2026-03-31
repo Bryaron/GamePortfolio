@@ -13,15 +13,10 @@
     align-items: center;
 }
 
-.grid--auto {
-    
-}
-
 .o-grid {
 	display: flex;
 	flex-flow: row wrap;
 	margin: 0 -1 * $gap;
-
 	&__item {
 		padding: 0 $gap;
 	}

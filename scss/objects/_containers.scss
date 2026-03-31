@@ -6,7 +6,6 @@
 .o-container {
     display: flex;
 }
-
 .o-body-container {
     display: flex;
     flex-direction: column;
@@ -98,7 +97,6 @@
     height: 8.4rem;
     min-width: 18.0rem;
     max-width: 24.8rem;
-
     .o-item-container {
         position: absolute;
         top: -1.9rem;
@@ -120,14 +118,11 @@
 }
 .o-item-info-state-container {
     @include flex($align: center, $justify: center);
-    /* border-top: 0.2rem solid $secondary-color; */
     padding: 0.4rem;
     width: 23.2rem;
     height: 1.8rem;
     position: relative;
-
     /* Stroke excluded from layout container with pseudoelement */
-
     @include border-after($size: 0.2rem, $color: $secondary-color, $inset: -0.2rem 0 0 0, $border-side: 'top');
 }
 /* Character Items End */
@@ -199,7 +194,6 @@
     min-width: 20.0rem;
     max-width: 42.0rem;
 }
-
 .o-project-card-container {
     position: relative;
     @include flex-row($align: flex-start, $justify: center, $wrap: wrap);
@@ -262,7 +256,6 @@
     min-width: 43.0rem;
     height: fit-content;
     flex: 1 0 auto;
-
     .o-links-content-container {
         @include flex-row($align: center, $justify: center, $wrap: wrap);
         min-width: 11.4rem;
@@ -270,7 +263,6 @@
         height: fit-content;
         gap: 3.2rem;
     }
-
     .o-links-link-container {
         @include flex-column($align: center, $justify: center, $wrap: nowrap);
         gap: 0.8rem;

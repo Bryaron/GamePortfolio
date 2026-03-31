@@ -11,7 +11,6 @@
     border-image-repeat: round round;
     border-image-source: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTgiIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1OCA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTM2IDFINTVDNTYuMTA0NiAxIDU3IDEuODk1NDMgNTcgM1YyMk01NyAzNlY1NUM1NyA1Ni4xMDQ2IDU2LjEwNDYgNTcgNTUgNTdIMzZNMjIgNTdIM0MxLjg5NTQzIDU3IDEgNTYuMTA0NiAxIDU1VjM2TTEgMjJWM0MxIDEuODk1NDMgMS44OTU0MyAxIDMgMUgyMiIgc3Ryb2tlPSIjRkFEODdGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K");
     border-style: solid;
-
     svg:first-child, img:first-child {
         @include centered-transform();
         width: 2.8rem;
@@ -22,15 +21,12 @@
         @include centered-transform();
         top: 80%;
     }
-
     &--outline {
         background: none;
     }
-
     &--filled {
         background: $secondary-color;
     }
-
     img[src=""],
     img:not([src]) {
         visibility: hidden;

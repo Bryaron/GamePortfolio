@@ -4,7 +4,6 @@
 
 .c-character {
     background-color: none;
-    
     &__stats {
         border-bottom: 1px dashed $secondary-color;
         p {
@@ -16,12 +15,4 @@
             }
         }
     }
-
-
-    &-sprite {
-
-        animation: bounce .7s linear infinite;
-
-    }
-    
 }
