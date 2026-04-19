@@ -138,6 +138,7 @@
 
     .o-character-rows-container{
         @include flex-row($align: flex-start, $justify: center);
+        position: relative;
         width: 23.2rem;
         height: 20.2rem;
         gap: $gap;
@@ -153,13 +154,6 @@
             width: 7.2rem;
             height: 20.2rem;
             max-height: 20.2rem;
-
-            img {
-                width: 7.2rem;
-                height: 20.2rem;
-                object-fit: cover;
-                image-rendering: pixelated;
-            }
         }   
     }
     .o-character-stats-container {

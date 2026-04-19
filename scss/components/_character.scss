@@ -1,6 +1,8 @@
 @use '../settings/variables' as *;
 @use '../settings/colors' as *;
 @use '../tools/flexbox' as *;
+@use '../tools/animations' as *;
+@use '../tools/mixins' as *;
 
 .c-character {
     background-color: none;
@@ -15,4 +17,27 @@
             }
         }
     }
+
+.c-character {
+    $sprite-directions: front, right, back, left;
+
+    &__spritesheet {
+        image-rendering: pixelated;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        /* For element */
+        /* @include sprite-sheet-tag(20.2rem, 20.2rem, calc(20.2rem * 4), calc(20.2rem * 4)); */
+        /* For background-image */
+        @include sprite-sheet-background(20.2rem, 20.2rem, calc(20.2rem * 2), calc(20.2rem * 4));
+
+        @each $direction in $sprite-directions {
+            &--#{$direction} {
+                background-image: url('../assets/spritesheets/character-sprite2x8.png');
+                @include idle-animation(0.5s, 2, $direction);
+            }
+        }
+    }
+}
 }

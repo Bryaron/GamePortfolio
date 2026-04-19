@@ -1,0 +1,48 @@
+@use '../settings/variables' as *;
+@use '../settings/colors' as *;
+
+/* Spriteanimations */
+/* Mixin idle keyframes */
+@mixin idle-keyframes($from-position, $to-position) {
+    from {
+        background-position: $from-position;
+    }
+    to {
+        background-position: $to-position;
+    }
+}
+
+/* Mixin idle animations */
+@mixin idle-animation($duration: 0.5s, $steps: 2, $direction: null) {
+    @if $direction == null {
+        animation: idle $duration steps($steps, jump-none) infinite;
+    } @else {
+        $keyframe-name: idle-#{$direction};
+        @keyframes #{$keyframe-name} {
+            @if $direction == 'front' {
+                @include idle-keyframes(0% 0%, 100% 0%);
+            } @else if $direction == 'right' {
+                @include idle-keyframes(0% 33%, 100% 33%);
+            } @else if $direction == 'back' {
+                @include idle-keyframes(0% 66%, 100% 66%);
+            } @else if $direction == 'left' {
+                @include idle-keyframes(0% 100%, 100% 100%);
+            }
+        }
+        animation: #{$keyframe-name} $duration steps($steps, jump-none) infinite;
+    }
+}
+/* Mixin sprite sheet */
+@mixin sprite-sheet-background($frame-width, $frame-height, $sprite-sheet-width, $sprite-sheet-height, $x-position: 0, $y-position: 0) {
+	width: $frame-width;
+	height: $frame-height;
+	background-size: $sprite-sheet-width $sprite-sheet-height;
+	background-position: $x-position $y-position;
+}
+
+@mixin sprite-sheet-tag($frame-width, $frame-height, $sprite-sheet-width, $sprite-sheet-height, $x-position: 0, $y-position: 0) {
+	width: $frame-width;
+	height: $frame-height;
+	object-position: top $x-position left $y-position;
+	object-fit: cover;
+}
