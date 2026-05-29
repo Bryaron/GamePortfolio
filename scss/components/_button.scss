@@ -7,28 +7,46 @@
     background: none;
     color: white;
     -webkit-text-stroke: 1px $pink-color;
+    cursor: pointer;
+    transition: all 0.15s ease;
+
     &__title {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    &:hover {
-        background: $orange-color;
-        box-shadow: 0.8rem 0 0 0 rgba(255, 152, 0, 0.5);
-        -webkit-text-stroke: 0;
-        stroke: none;
-    }
-    &--on {
-        background: $orange-color;
-        stroke: $pink-color;
-    }
-    &--off {
-        stroke: $pink-color;
-    }
+
     svg {
         min-width: 24px;
         max-width: 24px;
         min-height: 24px;
         max-height: 24px;
+    }
+
+    &:focus {
+        transform: scale(0.98);
+        background: $orange-color;
+        box-shadow: 0.8rem 0 0 0 rgba(255, 152, 0, 0.5);
+        -webkit-text-stroke: 0;
+        stroke: none;
+    }
+
+    &:hover,
+    &:active, 
+    &--on {
+        background: $orange-color;
+        box-shadow: 0.8rem 0 0 0 rgba(255, 152, 0, 0.5);
+        -webkit-text-stroke: 0;
+        stroke: none;
+        /* transform: scale(0.98); */
+    }   
+    &--off {
+        -webkit-text-stroke: 1px $pink-color;
+        stroke: $pink-color;
+    }
+
+    &--pressed {
+        transform: translateY(2px) scale(0.98);
+        filter: brightness(1.1);
     }
 }

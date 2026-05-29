@@ -546,30 +546,41 @@ a:hover {
   background: none;
   color: white;
   -webkit-text-stroke: 1px #FF417D;
+  cursor: pointer;
+  transition: all 0.15s ease;
 }
 .c-button__title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.c-button:hover {
-  background: #FF9800;
-  box-shadow: 0.8rem 0 0 0 rgba(255, 152, 0, 0.5);
-  -webkit-text-stroke: 0;
-  stroke: none;
-}
-.c-button--on {
-  background: #FF9800;
-  stroke: #FF417D;
-}
-.c-button--off {
-  stroke: #FF417D;
-}
 .c-button svg {
   min-width: 24px;
   max-width: 24px;
   min-height: 24px;
   max-height: 24px;
+}
+.c-button:focus {
+  transform: scale(0.98);
+  background: #FF9800;
+  box-shadow: 0.8rem 0 0 0 rgba(255, 152, 0, 0.5);
+  -webkit-text-stroke: 0;
+  stroke: none;
+}
+.c-button:hover, .c-button:active, .c-button--on {
+  background: #FF9800;
+  box-shadow: 0.8rem 0 0 0 rgba(255, 152, 0, 0.5);
+  -webkit-text-stroke: 0;
+  stroke: none;
+  /* transform: scale(0.98); */
+}
+.c-button--off {
+  -webkit-text-stroke: 1px #FF417D;
+  stroke: #FF417D;
+}
+.c-button--pressed {
+  transform: translateY(2px) scale(0.98);
+  filter: brightness(1.1);
 }
 
 .c-header {
