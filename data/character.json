@@ -1,0 +1,47 @@
+{
+    "name": "Bryan Aroni",
+    "skills": [
+        { "name": "html", "label": "HTML", "icon": "assets/icons/items/html.svg", "level": "advanced", "equipped": true },
+        { "name": "css", "label": "CSS", "icon": "assets/icons/items/css.svg", "level": "advanced", "equipped": true },
+        { "name": "javascript", "label": "JavaScript", "icon": "assets/icons/items/javascript.svg", "level": "advanced", "equipped": true },
+        { "name": "python", "label": "Python", "icon": "assets/icons/items/python.svg", "level": "intermediate", "equipped": false },
+        { "name": "csharp", "label": "C#", "icon": "assets/icons/items/csharp.svg", "level": "intermediate", "equipped": false },
+        { "name": "mysql", "label": "MySQL", "icon": "assets/icons/items/mysql.svg", "level": "basic", "equipped": false },
+        { "name": "git", "label": "Git", "icon": "assets/icons/items/git.svg", "level": "intermediate", "equipped": true },
+        { "name": "figma", "label": "Figma", "icon": "assets/icons/items/figma.svg", "level": "intermediate", "equipped": false },
+        { "name": "rive", "label": "Rive", "icon": "assets/icons/items/rive.svg", "level": "basic", "equipped": false },
+        { "name": "godot", "label": "Godot", "icon": "assets/icons/items/godot.svg", "level": "intermediate", "equipped": true },
+        { "name": "blender", "label": "Blender", "icon": "assets/icons/items/blender.svg", "level": "intermediate", "equipped": true }
+    ],
+    "stats": {
+        "hp": 50,
+        "sp": 50,
+        "code": 10,
+        "draw": 10,
+        "gamedev": 10,
+        "3d": 10
+    },
+    "bag": [
+        {
+            "title": "Shambler",
+            "img": "assets/img/projects/shambler.png",
+            "tool": "Blender",
+            "categories": ["modeling", "uv", "animation", "render"],
+            "link": "https://www.artstation.com/artwork/ZlJ0J1"
+        },
+        {
+            "title": "Google Clone",
+            "img": "assets/img/projects/google.png",
+            "tool": "VS Code",
+            "categories": ["js", "css", "html"],
+            "link": "https://bryaron.github.io/GoogleClone2025/"
+        },
+        {
+            "title": "Game Profile",
+            "img": "assets/img/projects/figma.png",
+            "tool": "Figma, VS Code",
+            "categories": ["figma", "ux", "bemit", "scss"],
+            "link": "https://www.figma.com/community/file/1620033621670413686"
+        }
+    ]
+}
